@@ -1,0 +1,21 @@
+---
+layout: default
+title: Princeton Review's Acquisitions
+---
+
+<h2>Princeton Review's Acquistitions</h2>
+
+<!-- Organizations -->
+{% assign acquisitions = site.data.acquisitions %}
+{% assign acquisitions = acquisitions | sort:"Name" %}
+
+<!-- Document -->
+
+{% for acquisition in acquisitions %}
+
+<ul>
+<li><strong>{{ acquisition.Name }}</strong> ({{ acquisition.Date }})</li>
+</ul>
+
+{% endfor %}
+
